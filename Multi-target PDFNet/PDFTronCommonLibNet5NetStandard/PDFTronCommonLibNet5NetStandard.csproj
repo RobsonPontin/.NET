@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="PDFTron.NET" Version="9.1.1-beta" />
+    <PackageReference Include="PDFTron.NET" Version="9.1.1-beta2" />
   </ItemGroup>
 
 </Project>

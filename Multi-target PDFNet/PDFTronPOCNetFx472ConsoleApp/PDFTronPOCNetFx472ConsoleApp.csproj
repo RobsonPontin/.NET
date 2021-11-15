@@ -76,7 +76,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PDFTronDotNet">
-      <HintPath>..\..\..\..\..\.nuget\packages\pdftron.net\9.1.1-beta\lib\netstandard2.0\PDFTronDotNet.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\.nuget\packages\pdftron.net\9.1.1-beta2\lib\netstandard2.0\PDFTronDotNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
