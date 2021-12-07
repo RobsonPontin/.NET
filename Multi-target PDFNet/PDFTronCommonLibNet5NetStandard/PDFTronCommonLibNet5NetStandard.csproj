@@ -8,25 +8,25 @@
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net5.0'">
 		<Reference Include="PDFTronDotNet">
-			<HintPath>..\..\..\..\..\PDFNetC64\Lib\net5.0\PDFTronDotNet.dll</HintPath>
+			<HintPath>..\PDFNetC64\Lib\net5.0\PDFTronDotNet.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1'">
 		<Reference Include="PDFTronDotNet">
-			<HintPath>..\..\..\..\..\PDFNetC64\Lib\netcoreapp2.1\PDFTronDotNet.dll</HintPath>
+			<HintPath>..\PDFNetC64\Lib\netcoreapp2.1\PDFTronDotNet.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1'">
 		<Reference Include="PDFTronDotNet">
-			<HintPath>..\..\..\..\..\PDFNetC64\Lib\netstandard2.1\PDFTronDotNet.dll</HintPath>
+			<HintPath>..\PDFNetC64\Lib\netstandard2.1\PDFTronDotNet.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
 		<Reference Include="PDFTronDotNet">
-			<HintPath>..\..\..\..\..\PDFNetC64\Lib\netstandard2.0\PDFTronDotNet.dll</HintPath>
+			<HintPath>..\PDFNetC64\Lib\netstandard2.0\PDFTronDotNet.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
