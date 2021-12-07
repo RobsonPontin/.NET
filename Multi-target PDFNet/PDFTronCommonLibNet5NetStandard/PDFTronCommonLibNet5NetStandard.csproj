@@ -6,6 +6,12 @@
 		<Is64BitOperatingSystem Condition="'$([System.Environment]::Is64BitOperatingSystem)' == 'true'">true</Is64BitOperatingSystem>
 	</PropertyGroup>
 
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net6.0'">
+		<Reference Include="PDFTronDotNet">
+			<HintPath>..\PDFNetC64\Lib\net6.0\PDFTronDotNet.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net5.0'">
 		<Reference Include="PDFTronDotNet">
 			<HintPath>..\PDFNetC64\Lib\net5.0\PDFTronDotNet.dll</HintPath>
