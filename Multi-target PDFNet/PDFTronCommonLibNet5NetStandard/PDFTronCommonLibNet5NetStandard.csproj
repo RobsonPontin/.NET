@@ -1,12 +1,58 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1;net5.0;netcoreapp3.1</TargetFrameworks>
-    <Platforms>AnyCPU;x64;x86</Platforms>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net5.0;netcoreapp2.1;netstandard2.0;netstandard2.1</TargetFrameworks>
+		<Platforms>AnyCPU</Platforms>
+		<Is64BitOperatingSystem Condition="'$([System.Environment]::Is64BitOperatingSystem)' == 'true'">true</Is64BitOperatingSystem>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="PDFTron.NET" Version="9.1.1-beta2" />
-  </ItemGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net6.0'">
+		<Reference Include="PDFTronDotNet">
+			<HintPath>..\PDFNetC64\Lib\net6.0\PDFTronDotNet.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net5.0'">
+		<Reference Include="PDFTronDotNet">
+			<HintPath>..\PDFNetC64\Lib\net5.0\PDFTronDotNet.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1'">
+		<Reference Include="PDFTronDotNet">
+			<HintPath>..\PDFNetC64\Lib\netcoreapp2.1\PDFTronDotNet.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1'">
+		<Reference Include="PDFTronDotNet">
+			<HintPath>..\PDFNetC64\Lib\netstandard2.1\PDFTronDotNet.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+		<Reference Include="PDFTronDotNet">
+			<HintPath>..\PDFNetC64\Lib\netstandard2.0\PDFTronDotNet.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<!-- This section is destinated to the Native libraries (unmanaged) which are compiled to either x64 or x86 -->
+	<ItemGroup>
+		<None Remove="win-x64\PDFNetC.dll" />
+		<None Remove="win-x86\PDFNetC.dll" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(Is64BitOperatingSystem)'=='true'">
+		<Content Include="win-x64/PDFNetC.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>PDFNetC.dll</TargetPath>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(Is64BitOperatingSystem)'=='false'">
+		<Content Include="win-x86/PDFNetC.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>PDFNetC.dll</TargetPath>
+		</Content>
+	</ItemGroup>
 </Project>
