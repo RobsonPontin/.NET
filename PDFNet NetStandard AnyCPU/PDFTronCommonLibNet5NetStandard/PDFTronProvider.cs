@@ -9,11 +9,10 @@ namespace PDFTronCommonLibNet5NetStandard
     public class PDFTronAssemblyLoader
     {
         /// <summary>
-        /// Load PDFNetLoader for runtime PDFNet loading.
-        /// Loads PDFNet.dll's from 'PDFNet/[x86|x64]'
+        /// Load PDFTronAssemblyLoader for runtime PDFNet loading.
+        /// Loads PDFTronDoNet.dll's from either 'win-x86 | win-x64'
         /// folders in current working directory.
         /// </summary>
-        /// <returns></returns>
         public static PDFTronAssemblyLoader Instance()
         {
             return _singleton;
@@ -25,7 +24,7 @@ namespace PDFTronCommonLibNet5NetStandard
         }
 
         /// <summary>
-        /// Resolve the loading of the PDFNetCore assembly
+        /// Resolve the loading of the PDFTronDoNet assembly
         /// </summary>
         private Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
@@ -33,7 +32,7 @@ namespace PDFTronCommonLibNet5NetStandard
         }
 
         /// <summary>
-        /// Use reflection to load the correct x64 or x86 assembly needed 
+        /// Use reflection to load the correct x64 or x86 assembly needed
         /// </summary>
         public Assembly LoadAssemblies()
         {
@@ -52,6 +51,9 @@ namespace PDFTronCommonLibNet5NetStandard
         }
     }
 
+    /// <summary>
+    /// Common place for all pdftron logic which can be consumed by different .NET apps
+    /// </summary>
     public class PDFTronProvider
     {
         private static string key = "demo:1632177260189:78c767d103000000007caed1bc2bc23ab6a64d7ddc59caa0651067f800";
