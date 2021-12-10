@@ -93,7 +93,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PDFTronCommonLibNet5NetStandard\PDFTronCommonLibNetStandard.csproj">
+    <ProjectReference Include="..\PDFTronCommonLibNetStandard\PDFTronCommonLibNetStandard.csproj">
       <Project>{2e082d06-7658-4618-a018-bf9ea50b778a}</Project>
       <Name>PDFTronCommonLibNetStandard</Name>
     </ProjectReference>

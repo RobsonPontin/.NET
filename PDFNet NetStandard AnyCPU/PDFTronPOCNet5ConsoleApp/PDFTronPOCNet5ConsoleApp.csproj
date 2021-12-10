@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PDFTronCommonLibNet5NetStandard\PDFTronCommonLibNetStandard.csproj" />
+    <ProjectReference Include="..\PDFTronCommonLibNetStandard\PDFTronCommonLibNetStandard.csproj" />
   </ItemGroup>
 
 </Project>

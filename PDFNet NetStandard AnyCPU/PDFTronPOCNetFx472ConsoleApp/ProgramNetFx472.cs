@@ -1,5 +1,5 @@
 ﻿
-using PDFTronCommonLibNet5NetStandard;
+using PDFTronCommonLibNetStandard;
 using System;
 using System.Reflection;
 

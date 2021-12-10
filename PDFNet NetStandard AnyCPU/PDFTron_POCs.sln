@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDFTronPOCNet5ConsoleApp", "PDFTronPOCNet5ConsoleApp\PDFTronPOCNet5ConsoleApp.csproj", "{76E437CD-14BE-4653-982E-53CDC393547F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDFTronCommonLibNetStandard", "PDFTronCommonLibNet5NetStandard\PDFTronCommonLibNetStandard.csproj", "{2E082D06-7658-4618-A018-BF9EA50B778A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDFTronCommonLibNetStandard", "PDFTronCommonLibNetStandard\PDFTronCommonLibNetStandard.csproj", "{2E082D06-7658-4618-A018-BF9EA50B778A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDFTronPOCNetCoreConsoleApp", "PDFTronPOCNetCoreConsoleApp\PDFTronPOCNetCoreConsoleApp.csproj", "{7C76E1DE-0FAA-47E6-AA52-A889ABDFD135}"
 EndProject
