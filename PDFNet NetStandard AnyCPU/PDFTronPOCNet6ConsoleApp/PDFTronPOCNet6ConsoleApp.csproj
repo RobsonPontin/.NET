@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <!-- Supported Frameworks https://docs.microsoft.com/en-us/dotnet/standard/frameworks -->
+    <TargetFramework>net6.0</TargetFramework>
+    <Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PDFTronCommonLibNet5NetStandard\PDFTronCommonLibNetStandard.csproj" />
+  </ItemGroup>
+	
+</Project>

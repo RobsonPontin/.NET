@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+		<Platforms>AnyCPU</Platforms>
+	</PropertyGroup>
+
+	<!-- This section is destinated to the Native libraries (unmanaged) which are compiled to either x64 or x86 -->
+	<ItemGroup>
+		<None Remove="win-x64\PDFTronDotNet.dll" />
+		<None Remove="win-x86\PDFNetC.dll" />
+		<None Remove="win-x86\PDFTronDotNet.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="win-x64\PDFTronDotNet.dll">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="win-x86\PDFTronDotNet.dll">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="win-x64/PDFNetC.dll">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="win-x86\PDFNetC.dll">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<!-- Reference x86 lib -->
+	<ItemGroup>
+	  <Reference Include="PDFTronDotNet">
+	    <HintPath>win-x86\PDFTronDotNet.dll</HintPath>
+	    <Private>false</Private>
+	    <EmbedInteropTypes>false</EmbedInteropTypes>
+	  </Reference>
+	</ItemGroup>
+</Project>

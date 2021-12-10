@@ -1,0 +1,2 @@
+- PDFTronCore .NET Standard 2.0
+- PDFNet x86 native library
